@@ -29,16 +29,16 @@ var server=http.createServer((request,responce)=>{
           if(error)
           {console.log("error in reading file\n");
           responce.writeHead(200, {'Content-Type':'text/html'});
-         responce.write(error);
+         responce.end(error);
         //  responce.end();
           }
           else{
                 console.log("from result "+ data);
                responce.writeHead(200, {'Content-Type':'text/html'});
-               responce.write(data);
+               responce.end(data);
               //  responce.end();
                 }
-                responce.end("dsxv");
+                //responce.end("dsxv");
       });
     }
  });
